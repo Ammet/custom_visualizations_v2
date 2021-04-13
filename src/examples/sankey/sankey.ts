@@ -266,8 +266,9 @@ const vis: Sankey = {
         .attr('x', function (d: Cell) { return d.x0 - 6 })
         .attr('y', function (d: Cell) { return (d.y1 + d.y0) / 2 })
         .attr('dy', '0.35em')
-        .style('font-weight', 'bold')
         .attr('text-anchor', 'end')
+        .style('font-weight', 'bold')
+        .style('pointer-events', 'none')
         .style('fill', '#222')
         .text(function (d: Cell) {
           switch (config.label_type) {
